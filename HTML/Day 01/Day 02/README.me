@@ -1,0 +1,1991 @@
+🚀 Day 02 — HTML Links, Images & Attributes
+
+Welcome to Day 02 of my Frontend Development journey.
+
+Student: Shravan Kumar
+Goal: Become a Frontend Developer
+Day: 02
+Technology: HTML5
+
+---
+
+🎯 Today's Goal
+
+Today I learned how to create links, add images, use HTML attributes, work with file paths, and create navigation between different sections and pages.
+
+Today's targets:
+
+- Understand HTML links
+- Learn the "<a>" element
+- Understand the "href" attribute
+- Create external links
+- Create internal links
+- Understand relative paths
+- Understand absolute URLs
+- Learn "target" and "rel"
+- Create email and telephone links
+- Create section/page links
+- Learn the "<img>" element
+- Understand "src" and "alt"
+- Add local images
+- Understand image folders and paths
+- Create clickable images
+- Understand HTML attributes
+- Learn "id" and "class"
+- Learn "title", "style" and "download"
+- Understand "<br>" and "<hr>"
+- Understand void elements
+- Practice accessibility basics
+- Build a practical HTML webpage
+- Upload Day 02 work to GitHub
+
+---
+
+🔗 1. What is an HTML Link?
+
+An HTML link allows users to move from one webpage or location to another.
+
+For example:
+
+- Open Google
+- Open GitHub
+- Open another page
+- Open a specific section
+- Send an email
+- Call a phone number
+
+HTML links are created using the "<a>" element.
+
+Example:
+
+<a href="https://www.google.com">
+    Google
+</a>
+
+---
+
+🏷️ 2. Anchor Element "<a>"
+
+The "<a>" element is called the Anchor element.
+
+It is mainly used to create hyperlinks.
+
+Basic structure:
+
+<a href="URL">
+    Link Text
+</a>
+
+Example:
+
+<a href="https://github.com">
+    GitHub
+</a>
+
+Here:
+
+<a> → Opening tag
+href → Attribute
+"https://github.com" → Attribute value
+GitHub → Link text
+</a> → Closing tag
+
+Remember:
+
+<a> = Anchor = Link
+
+---
+
+⚙️ 3. href Attribute
+
+"href" stands for Hypertext Reference.
+
+It tells the browser where the link should go.
+
+Example:
+
+<a href="https://github.com">
+    Visit GitHub
+</a>
+
+Here:
+
+href="https://github.com"
+
+is the destination of the link.
+
+Basic syntax:
+
+<a href="URL">
+    Link Text
+</a>
+
+---
+
+📝 4. Link Text
+
+The text between the opening and closing "<a>" tags is called the link text.
+
+Example:
+
+<a href="https://github.com">
+    Visit My GitHub
+</a>
+
+Here:
+
+Visit My GitHub
+
+is the visible link text.
+
+It is better to use meaningful link text.
+
+Better:
+
+<a href="https://github.com">
+    Visit My GitHub Profile
+</a>
+
+Instead of:
+
+<a href="https://github.com">
+    Click Here
+</a>
+
+Meaningful link text helps users understand where the link will take them.
+
+---
+
+🌐 5. External Links
+
+An external link points to another website or domain.
+
+Example:
+
+<a href="https://www.google.com">
+    Google
+</a>
+
+Another example:
+
+<a href="https://github.com">
+    GitHub
+</a>
+
+Another:
+
+<a href="https://www.freecodecamp.org">
+    freeCodeCamp
+</a>
+
+---
+
+🏠 6. Internal Links
+
+An internal link connects pages within the same website/project.
+
+Suppose our project has:
+
+website/
+│
+├── index.html
+├── about.html
+└── contact.html
+
+From "index.html" to "about.html":
+
+<a href="about.html">
+    About Me
+</a>
+
+From "index.html" to "contact.html":
+
+<a href="contact.html">
+    Contact
+</a>
+
+These are internal links because they point to pages inside the same website/project.
+
+---
+
+📁 7. What is a Relative Path?
+
+A relative path describes the location of a file relative to the current file.
+
+Example:
+
+<a href="about.html">
+    About
+</a>
+
+If "about.html" is in the same folder, we can simply write:
+
+about.html
+
+Another example:
+
+<a href="pages/contact.html">
+    Contact
+</a>
+
+Here:
+
+pages/contact.html
+
+is a relative path.
+
+---
+
+🌍 8. What is an Absolute URL?
+
+An absolute URL contains the complete web address.
+
+Example:
+
+<a href="https://github.com">
+    GitHub
+</a>
+
+Here:
+
+https://github.com
+
+is an absolute URL.
+
+Difference:
+
+Relative path:
+
+about.html
+
+Absolute URL:
+
+https://example.com/about.html
+
+Remember:
+
+Relative → Based on current location
+
+Absolute → Complete address
+
+---
+
+↩️ 9. Parent Directory "../"
+
+"../" is used to move one folder level up in a relative path.
+
+Example structure:
+
+website/
+│
+├── index.html
+│
+└── pages/
+    └── about.html
+
+From "about.html" to "index.html":
+
+<a href="../index.html">
+    Home
+</a>
+
+Here:
+
+../
+
+means:
+
+Go one level up.
+
+Simple trick:
+
+../ = Parent folder
+
+---
+
+🎯 10. target Attribute
+
+The "target" attribute controls the browsing context in which a link is opened.
+
+Example:
+
+<a
+    href="https://github.com"
+    target="_blank"
+>
+    GitHub
+</a>
+
+---
+
+🆕 11. target="_blank"
+
+"target="_blank" is commonly used to open a link in a new browser tab or another new browsing context.
+
+Example:
+
+<a
+    href="https://github.com"
+    target="_blank"
+>
+    Visit GitHub
+</a>
+
+Important:
+
+"target="_blank" does not mean that every browser must visually create a new tab. It requests a new browsing context, which commonly appears as a new tab.
+
+---
+
+🔒 12. rel Attribute
+
+The "rel" attribute describes the relationship between the current page and the linked resource.
+
+For external links opened with "_blank", a common pattern is:
+
+<a
+    href="https://github.com"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+    GitHub
+</a>
+
+"noopener" and "noreferrer" can provide security and privacy-related behavior for new browsing contexts.
+
+---
+
+📧 13. Email Links
+
+We can create an email link using:
+
+mailto:
+
+Example:
+
+<a href="mailto:example@gmail.com">
+    Send Email
+</a>
+
+When the user clicks the link, the browser/device may open an email application or email handler.
+
+Example:
+
+<a href="mailto:shravan@example.com">
+    Email Shravan
+</a>
+
+---
+
+📞 14. Telephone Links
+
+We can create a phone link using:
+
+tel:
+
+Example:
+
+<a href="tel:+911234567890">
+    Call Me
+</a>
+
+On supported devices, clicking the link can open the phone/calling interface.
+
+---
+
+🔖 15. Link to a Section of the Same Page
+
+We can create a link that jumps to a specific section of the same webpage.
+
+For this we use:
+
+id
+
+and
+
+#
+
+Example:
+
+<a href="#about">
+    Go to About
+</a>
+
+<h2 id="about">
+    About Me
+</h2>
+
+Here:
+
+href="#about"
+
+points to:
+
+id="about"
+
+---
+
+🧭 16. Creating Page Navigation
+
+Example:
+
+<nav>
+
+    <a href="#home">
+        Home
+    </a>
+
+    <a href="#about">
+        About
+    </a>
+
+    <a href="#skills">
+        Skills
+    </a>
+
+    <a href="#contact">
+        Contact
+    </a>
+
+</nav>
+
+Later, CSS and JavaScript will help us create professional navigation bars.
+
+---
+
+🖼️ 17. What is an HTML Image?
+
+Images can be displayed on a webpage using the "<img>" element.
+
+Example:
+
+<img
+    src="profile.jpg"
+    alt="Shravan Kumar profile photo"
+>
+
+The browser loads the image specified in the "src" attribute.
+
+---
+
+🏷️ 18. "<img>" Element
+
+Basic syntax:
+
+<img
+    src="image.jpg"
+    alt="Image description"
+>
+
+The "<img>" element is a void element.
+
+It does not normally have a closing tag.
+
+Correct:
+
+<img src="photo.jpg" alt="My Photo">
+
+Incorrect:
+
+<img src="photo.jpg" alt="My Photo"></img>
+
+---
+
+📍 19. src Attribute
+
+"src" means Source.
+
+It tells the browser where the image/resource is located.
+
+Example:
+
+<img
+    src="profile.jpg"
+    alt="Profile photo"
+>
+
+Here:
+
+src="profile.jpg"
+
+is the image source.
+
+---
+
+♿ 20. alt Attribute
+
+"alt" means alternative text.
+
+It provides a text description of an image.
+
+Example:
+
+<img
+    src="profile.jpg"
+    alt="Shravan Kumar profile photo"
+>
+
+Why is "alt" important?
+
+- Helps when an image cannot be displayed
+- Helps screen-reader users understand meaningful images
+- Improves accessibility
+- Describes the purpose/meaning of the image
+
+Good:
+
+<img
+    src="profile.jpg"
+    alt="Shravan Kumar profile photo"
+>
+
+Weak:
+
+<img
+    src="profile.jpg"
+    alt="image"
+>
+
+For a purely decorative image, an empty alt can be appropriate:
+
+<img
+    src="decoration.png"
+    alt=""
+>
+
+---
+
+📏 21. Image Width
+
+We can specify an image width using the "width" attribute.
+
+Example:
+
+<img
+    src="profile.jpg"
+    alt="Shravan Kumar"
+    width="200"
+>
+
+Here:
+
+width="200"
+
+sets the image width to 200 CSS pixels in this HTML presentation.
+
+For responsive designs, CSS is generally preferred for controlling image size.
+
+---
+
+📐 22. Image Height
+
+We can specify image height using the "height" attribute.
+
+Example:
+
+<img
+    src="profile.jpg"
+    alt="Shravan Kumar"
+    width="200"
+    height="200"
+>
+
+Here:
+
+width="200"
+
+and:
+
+height="200"
+
+specify the displayed dimensions.
+
+---
+
+💻 23. Local Images
+
+A local image is an image stored inside our project.
+
+Example:
+
+day02/
+│
+├── index.html
+└── profile.jpg
+
+HTML:
+
+<img
+    src="profile.jpg"
+    alt="Shravan Kumar profile photo"
+>
+
+Because the image is in the same folder as "index.html", we can use:
+
+profile.jpg
+
+---
+
+📁 24. Images Folder
+
+For better project organization, images can be stored in a separate folder.
+
+Example:
+
+day02/
+│
+├── index.html
+│
+└── images/
+    └── profile.jpg
+
+HTML:
+
+<img
+    src="images/profile.jpg"
+    alt="Shravan Kumar profile photo"
+>
+
+Here:
+
+images/profile.jpg
+
+is the relative path.
+
+---
+
+📂 25. Multiple Folder Path
+
+Suppose the structure is:
+
+project/
+│
+├── index.html
+│
+└── assets/
+    │
+    └── images/
+        └── profile.jpg
+
+Then:
+
+<img
+    src="assets/images/profile.jpg"
+    alt="Shravan Kumar profile photo"
+>
+
+Path:
+
+assets/images/profile.jpg
+
+---
+
+🌐 26. Online Images
+
+An image can also be loaded using a complete URL.
+
+Example:
+
+<img
+    src="https://example.com/image.jpg"
+    alt="Example image"
+>
+
+Here:
+
+https://example.com/image.jpg
+
+is an absolute URL.
+
+For personal projects, storing important images inside your own project is often more reliable because you control the files.
+
+---
+
+🔗 27. Image as a Link
+
+An image can be placed inside an anchor element.
+
+Example:
+
+<a href="https://github.com">
+
+    <img
+        src="github-logo.png"
+        alt="GitHub"
+        width="100"
+    >
+
+</a>
+
+Now the image becomes clickable.
+
+Clicking the image opens GitHub.
+
+---
+
+⚙️ 28. What are HTML Attributes?
+
+Attributes provide additional information about HTML elements.
+
+Example:
+
+<a href="https://github.com">
+    GitHub
+</a>
+
+Here:
+
+href
+
+is an attribute.
+
+Another example:
+
+<img
+    src="profile.jpg"
+    alt="Profile photo"
+>
+
+Here:
+
+src
+
+and:
+
+alt
+
+are attributes.
+
+---
+
+🧩 29. Attribute Syntax
+
+General syntax:
+
+<tag attribute="value">
+
+Example:
+
+<a href="https://github.com">
+
+Another example:
+
+<img
+    src="profile.jpg"
+    alt="Profile photo"
+>
+
+Basic structure:
+
+attribute="value"
+
+Example:
+
+href="https://github.com"
+
+href → Attribute name
+
+"https://github.com" → Attribute value
+
+---
+
+➕ 30. Multiple Attributes
+
+One HTML element can have multiple attributes.
+
+Example:
+
+<img
+    src="profile.jpg"
+    alt="Shravan Kumar profile photo"
+    width="200"
+    height="200"
+>
+
+Here we have:
+
+src
+alt
+width
+height
+
+Four attributes.
+
+---
+
+🆔 31. id Attribute
+
+The "id" attribute gives an element a unique identifier within a page.
+
+Example:
+
+<h2 id="about">
+    About Me
+</h2>
+
+The id can be used for:
+
+- Page navigation
+- CSS
+- JavaScript
+
+Example:
+
+<a href="#about">
+    Go to About
+</a>
+
+<h2 id="about">
+    About Me
+</h2>
+
+---
+
+🏷️ 32. class Attribute
+
+The "class" attribute is used to assign one or more elements to a class.
+
+Example:
+
+<p class="skill">
+    HTML
+</p>
+
+<p class="skill">
+    CSS
+</p>
+
+<p class="skill">
+    JavaScript
+</p>
+
+The same class can be used on multiple elements.
+
+Later in CSS:
+
+.skill {
+    color: blue;
+}
+
+---
+
+📝 33. title Attribute
+
+The "title" attribute can provide additional information about an element.
+
+Example:
+
+<a
+    href="https://github.com"
+    title="Open GitHub"
+>
+    GitHub
+</a>
+
+In many browsers, hovering over the element may show the title as a tooltip.
+
+---
+
+🎨 34. style Attribute
+
+The "style" attribute allows inline CSS.
+
+Example:
+
+<p style="color: blue;">
+    Hello Shravan
+</p>
+
+The text will be styled using the inline CSS rule.
+
+Important:
+
+Inline style is useful for learning and small cases, but larger projects should generally use CSS files.
+
+Example:
+
+style="color: blue;"
+
+Later we will learn:
+
+CSS
+
+and use:
+
+<link rel="stylesheet" href="style.css">
+
+---
+
+📥 35. download Attribute
+
+The "download" attribute can request download behavior for a linked resource.
+
+Example:
+
+<a
+    href="resume.pdf"
+    download
+>
+    Download Resume
+</a>
+
+It can also have a value in some cases:
+
+<a
+    href="resume.pdf"
+    download="Shravan-Kumar-Resume.pdf"
+>
+    Download Resume
+</a>
+
+Important:
+
+Actual download behavior can depend on browser and server/security rules, especially for cross-origin resources.
+
+---
+
+↩️ 36. "<br>" Tag
+
+"<br>" creates a line break.
+
+Example:
+
+Hello<br>
+My name is Shravan.
+
+Output:
+
+Hello
+My name is Shravan.
+
+Another example:
+
+<p>
+    Hello Shravan<br>
+    Welcome to my website.
+</p>
+
+Important:
+
+Do not use many "<br>" tags to create page layout or large spacing.
+
+CSS should be used for layout and spacing.
+
+---
+
+➖ 37. "<hr>" Tag
+
+"<hr>" represents a thematic break between sections.
+
+Example:
+
+<h2>About Me</h2>
+
+<hr>
+
+<h2>My Skills</h2>
+
+It can help visually and semantically separate topics or sections.
+
+---
+
+🚫 38. Void Elements
+
+Void elements are HTML elements that do not have normal closing tags.
+
+Common examples:
+
+<img>
+<br>
+<hr>
+<input>
+<meta>
+<link>
+<source>
+<track>
+<wbr>
+
+Examples:
+
+<img src="photo.jpg" alt="Photo">
+
+<br>
+
+<hr>
+
+<input type="text">
+
+We do not normally write:
+
+</img>
+
+</br>
+
+</hr>
+
+---
+
+🔄 39. Relative Path vs Absolute URL
+
+Relative path:
+
+about.html
+
+images/profile.jpg
+
+../index.html
+
+Absolute URL:
+
+https://github.com
+
+https://www.google.com
+
+Easy way to remember:
+
+Relative
+→ Current project/file location ke according
+
+Absolute
+→ Complete address
+
+---
+
+📁 40. Recommended Project Structure
+
+frontend-learning-2026/
+│
+├── HTML/
+│   │
+│   ├── day01/
+│   │   ├── index.html
+│   │   └── README.md
+│   │
+│   └── day02/
+│       │
+│       ├── index.html
+│       ├── README.md
+│       │
+│       └── images/
+│           └── profile.jpg
+│
+├── CSS/
+│
+├── JavaScript/
+│
+└── Projects/
+
+This structure will help keep the learning repository organized.
+
+---
+
+♿ 41. Accessibility Basics
+
+Accessibility means making websites easier to use for different types of users.
+
+Important practices:
+
+### Meaningful alt text
+
+<img
+    src="profile.jpg"
+    alt="Shravan Kumar profile photo"
+>
+
+### Meaningful link text
+
+Good:
+
+<a href="projects.html">
+    View My Projects
+</a>
+
+Less descriptive:
+
+<a href="projects.html">
+    Click Here
+</a>
+
+The user should be able to understand the purpose of a link.
+
+---
+
+✅ 42. HTML Best Practices
+
+1. Use meaningful link text.
+
+2. Add useful "alt" text to meaningful images.
+
+3. Keep files and folders organized.
+
+4. Use lowercase and simple file names.
+
+Example:
+
+profile.jpg
+
+about.html
+
+contact.html
+
+5. Maintain proper indentation.
+
+6. Keep HTML readable.
+
+7. Use semantic elements where appropriate.
+
+8. Use CSS for styling instead of excessive inline styles.
+
+9. Use CSS for layout instead of excessive "<br>" tags.
+
+10. Test links and image paths before pushing to GitHub.
+
+---
+
+❌ 43. Common Mistakes
+
+Mistake 1:
+
+<a>
+    GitHub
+</a>
+
+Problem:
+
+No "href" destination.
+
+Correct:
+
+<a href="https://github.com">
+    GitHub
+</a>
+
+---
+
+Mistake 2:
+
+<img href="photo.jpg">
+
+Problem:
+
+Images use "src", not "href".
+
+Correct:
+
+<img
+    src="photo.jpg"
+    alt="Photo"
+>
+
+---
+
+Mistake 3:
+
+<img src="photo.jpg"></img>
+
+Problem:
+
+"<img>" is a void element.
+
+Correct:
+
+<img
+    src="photo.jpg"
+    alt="Photo"
+>
+
+---
+
+Mistake 4:
+
+Wrong image path:
+
+<img
+    src="profile.jpg"
+    alt="Profile"
+>
+
+when the actual image is:
+
+images/profile.jpg
+
+Correct:
+
+<img
+    src="images/profile.jpg"
+    alt="Profile"
+>
+
+---
+
+Mistake 5:
+
+Missing "alt":
+
+<img src="profile.jpg">
+
+Better:
+
+<img
+    src="profile.jpg"
+    alt="Shravan Kumar profile photo"
+>
+
+---
+
+Mistake 6:
+
+Wrong relative path.
+
+Always check your:
+
+- File name
+- Folder name
+- Extension
+- Current file location
+
+---
+
+💻 44. My Day 02 Practical Webpage
+
+I created a webpage using:
+
+- HTML links
+- Images
+- Attributes
+- Internal navigation
+- External links
+- Email link
+- Phone link
+- Sections
+- IDs
+- Classes
+
+Example:
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Day 02 - HTML Links and Images</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>
+            Hello, I'm Shravan Kumar
+        </h1>
+
+        <p>
+            BCA Graduate | Aspiring Frontend Developer
+        </p>
+
+        <nav>
+
+            <a href="#about">
+                About
+            </a>
+
+            <br>
+
+            <a href="#skills">
+                Skills
+            </a>
+
+            <br>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+    <hr>
+
+    <main>
+
+        <section id="about">
+
+            <h2>
+                About Me
+            </h2>
+
+            <img
+                src="images/profile.jpg"
+                alt="Shravan Kumar profile photo"
+                width="200"
+            >
+
+            <p>
+                My name is Shravan Kumar.
+                I am a BCA graduate and I am learning
+                Frontend Development.
+            </p>
+
+        </section>
+
+        <hr>
+
+        <section id="skills">
+
+            <h2>
+                My Skills
+            </h2>
+
+            <p>
+                HTML
+            </p>
+
+            <p>
+                CSS
+            </p>
+
+            <p>
+                JavaScript
+            </p>
+
+        </section>
+
+        <hr>
+
+        <section>
+
+            <h2>
+                Useful Links
+            </h2>
+
+            <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub
+            </a>
+
+            <br><br>
+
+            <a
+                href="https://www.freecodecamp.org"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                freeCodeCamp
+            </a>
+
+        </section>
+
+        <hr>
+
+        <section id="contact">
+
+            <h2>
+                Contact Me
+            </h2>
+
+            <a href="mailto:example@gmail.com">
+                Send Email
+            </a>
+
+            <br><br>
+
+            <a href="tel:+911234567890">
+                Call Me
+            </a>
+
+        </section>
+
+    </main>
+
+    <hr>
+
+    <footer>
+
+        <p>
+            © 2026 Shravan Kumar
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
+
+---
+
+🧪 45. Day 02 Practice Challenge
+
+Create your own webpage.
+
+Requirements:
+
+1. Add your name using "<h1>"
+
+2. Add an About section.
+
+3. Add an About paragraph.
+
+4. Add a profile image.
+
+5. Use "src".
+
+6. Use meaningful "alt".
+
+7. Set image width.
+
+8. Add a Skills section.
+
+9. Add at least three skills.
+
+10. Add a GitHub link.
+
+11. Add a freeCodeCamp link.
+
+12. Add an external link using "target="_blank"".
+
+13. Add an email link.
+
+14. Add a phone link.
+
+15. Add navigation links using section IDs.
+
+16. Use at least one "id".
+
+17. Use at least one "class".
+
+18. Use "title" at least once.
+
+19. Use "<hr>".
+
+20. Use "<br>".
+
+21. Use proper HTML5 document structure.
+
+---
+
+🏆 46. Day 02 Challenge Structure
+
+My Name
+    ↓
+About Me
+    ↓
+Profile Image
+    ↓
+About Paragraph
+    ↓
+My Skills
+    ↓
+HTML
+CSS
+JavaScript
+    ↓
+Useful Links
+    ↓
+GitHub
+freeCodeCamp
+    ↓
+Contact
+    ↓
+Email
+Phone
+
+---
+
+🎤 47. Interview Questions
+
+Q1. What is an anchor element?
+
+Answer:
+
+The "<a>" element is used to create hyperlinks in HTML.
+
+---
+
+Q2. What is "href"?
+
+Answer:
+
+"href" specifies the destination or reference of a hyperlink.
+
+---
+
+Q3. What is an external link?
+
+Answer:
+
+A link that points to another website or domain is called an external link.
+
+Example:
+
+<a href="https://github.com">
+    GitHub
+</a>
+
+---
+
+Q4. What is an internal link?
+
+Answer:
+
+A link that points to another page or location within the same website/project.
+
+Example:
+
+<a href="about.html">
+    About
+</a>
+
+---
+
+Q5. What is a relative path?
+
+Answer:
+
+A path that describes a file location relative to the current document.
+
+Example:
+
+images/profile.jpg
+
+---
+
+Q6. What is an absolute URL?
+
+Answer:
+
+An absolute URL contains the complete web address.
+
+Example:
+
+https://github.com
+
+---
+
+Q7. What is "target="_blank""?
+
+Answer:
+
+It requests that the link be opened in a new browsing context, commonly a new tab.
+
+---
+
+Q8. What is "rel"?
+
+Answer:
+
+"rel" describes the relationship between the current document and the linked resource.
+
+---
+
+Q9. What is "mailto:"?
+
+Answer:
+
+"mailto:" is used to create an email link.
+
+Example:
+
+<a href="mailto:example@gmail.com">
+    Email
+</a>
+
+---
+
+Q10. What is "tel:"?
+
+Answer:
+
+"tel:" is used to create a telephone link.
+
+Example:
+
+<a href="tel:+911234567890">
+    Call
+</a>
+
+---
+
+Q11. What is the "<img>" element?
+
+Answer:
+
+The "<img>" element is used to display images on a webpage.
+
+---
+
+Q12. What is "src"?
+
+Answer:
+
+"src" specifies the source/location of an image or other resource.
+
+---
+
+Q13. What is "alt"?
+
+Answer:
+
+"alt" provides alternative text for an image and is important for accessibility.
+
+---
+
+Q14. Does "<img>" have a closing tag?
+
+Answer:
+
+No. "<img>" is a void element.
+
+---
+
+Q15. What is an HTML attribute?
+
+Answer:
+
+An attribute provides additional information about an HTML element.
+
+Example:
+
+<a href="https://github.com">
+
+Here:
+
+href
+
+is an attribute.
+
+---
+
+Q16. What is "id"?
+
+Answer:
+
+"id" identifies a particular element and should normally be unique within the page.
+
+---
+
+Q17. What is "class"?
+
+Answer:
+
+"class" assigns an element to one or more groups/classes and can be shared by multiple elements.
+
+---
+
+Q18. What is "<br>"?
+
+Answer:
+
+"<br>" creates a line break.
+
+---
+
+Q19. What is "<hr>"?
+
+Answer:
+
+"<hr>" represents a thematic break.
+
+---
+
+Q20. What is a void element?
+
+Answer:
+
+A void element does not have a normal closing tag.
+
+Examples:
+
+<img>
+<br>
+<hr>
+<input>
+
+---
+
+🧠 48. Quick Revision
+
+Remember:
+
+<a>
+ ↓
+Anchor / Link
+
+href
+ ↓
+Link Destination
+
+target
+ ↓
+Link Browsing Context
+
+rel
+ ↓
+Relationship
+
+mailto:
+ ↓
+Email
+
+tel:
+ ↓
+Telephone
+
+<img>
+ ↓
+Image
+
+src
+ ↓
+Image Source
+
+alt
+ ↓
+Alternative Text
+
+width
+ ↓
+Image Width
+
+height
+ ↓
+Image Height
+
+id
+ ↓
+Unique Identifier
+
+class
+ ↓
+Group/Class
+
+title
+ ↓
+Additional Information
+
+style
+ ↓
+Inline CSS
+
+download
+ ↓
+Download Behavior
+
+<br>
+ ↓
+Line Break
+
+<hr>
+ ↓
+Thematic Break
+
+../
+ ↓
+Parent Directory
+
+---
+
+🧠 49. Easy Memory Tricks
+
+<a>
+→ Anchor
+→ Link
+
+href
+→ Hypertext Reference
+→ Where the link goes
+
+<img>
+→ Image
+
+src
+→ Source
+→ Where image comes from
+
+alt
+→ Alternative
+→ Image description
+
+id
+→ Identity
+→ Particular element
+
+class
+→ Group
+→ Multiple elements
+
+br
+→ Break
+→ Line break
+
+hr
+→ Horizontal/Thematic Break
+
+../
+→ One level up
+
+---
+
+📒 50. My Learning Notes
+
+Today I learned:
+
+- HTML links are created using the "<a>" element.
+- "href" specifies the link destination.
+- External links point to other websites.
+- Internal links connect pages inside a project/website.
+- Relative paths depend on the current file location.
+- Absolute URLs contain complete web addresses.
+- "../" means one parent directory level.
+- "target="_blank"" requests a new browsing context.
+- "rel" describes the relationship with the linked resource.
+- "mailto:" creates email links.
+- "tel:" creates telephone links.
+- Page-section links can use "#id".
+- "<img>" displays images.
+- "src" specifies the image source.
+- "alt" provides alternative image text.
+- Images can be stored in separate folders.
+- Images can be made clickable by placing them inside "<a>".
+- HTML attributes provide additional information.
+- "id" identifies an element.
+- "class" groups elements.
+- "title" can provide additional information.
+- "style" allows inline CSS.
+- "download" can request download behavior.
+- "<br>" creates a line break.
+- "<hr>" represents a thematic break.
+- Void elements do not have normal closing tags.
+- Accessibility should be considered while creating webpages.
+
+---
+
+🛠️ 51. Tools Used
+
+- Visual Studio Code
+- GitHub Codespaces
+- Web Browser
+- Git
+- GitHub
+- freeCodeCamp
+
+---
+
+📁 52. Project Structure
+
+frontend-learning-2026/
+│
+└── HTML/
+    │
+    └── day02/
+        │
+        ├── index.html
+        ├── README.md
+        │
+        └── images/
+            └── profile.jpg
+
+---
+
+📤 53. GitHub Commit
+
+Today's commit:
+
+Day 02: Added HTML links images and attributes
+
+Git commands:
+
+git status
+
+git add .
+
+git commit -m "Day 02: Added HTML links images and attributes"
+
+git push
+
+---
+
+🚀 54. Day 02 Result
+
+Completed ✅
+
+- [x] Learned HTML links
+- [x] Learned Anchor element
+- [x] Learned href
+- [x] Learned external links
+- [x] Learned internal links
+- [x] Learned relative paths
+- [x] Learned absolute URLs
+- [x] Learned target
+- [x] Learned rel
+- [x] Learned email links
+- [x] Learned telephone links
+- [x] Learned section links
+- [x] Learned HTML images
+- [x] Learned src
+- [x] Learned alt
+- [x] Learned image paths
+- [x] Learned HTML attributes
+- [x] Learned id
+- [x] Learned class
+- [x] Learned title
+- [x] Learned style
+- [x] Learned download
+- [x] Learned br
+- [x] Learned hr
+- [x] Learned void elements
+- [x] Practiced accessibility basics
+- [x] Created practical webpage
+- [x] Practiced HTML
+- [x] Prepared GitHub commit
+
+---
+
+🎯 Next Day
+
+Day 03 — HTML Lists & Tables
+
+Next I will learn:
+
+- Unordered Lists
+- Ordered Lists
+- List Items
+- Nested Lists
+- Description Lists
+- HTML Tables
+- Table Rows
+- Table Headers
+- Table Data
+- Table Borders
+- Table Structure
+- Practical HTML page
+- Practice Challenge
+
+---
+
+👨‍💻 Author
+
+Shravan Kumar
+
+Aspiring Frontend Developer
+
+GitHub: "CodeByShravan" (https://github.com/CodeByShravan)
+
+---
+
+⭐ Learning Rule
+
+«Don't just copy code. Understand it, type it yourself, change it, break it, fix it, and build something with it.»
+
+Day 02 completed! 🚀
